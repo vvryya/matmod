@@ -1,0 +1,16 @@
+model lab0302
+        parameter Real a=-0.32;
+        parameter Real b=-0.89;
+        parameter Real c=-0.51;
+        parameter Real h=-0.62;
+        parameter Real x0=31050;
+        parameter Real y0=20002;
+        Real x(start=x0);
+        Real y(start=y0);
+        Real t;
+equation
+        der(x)=a*x+b*y+2*sin(10*t);
+        der(y)=c*x+h*y+2*cos(10*t);
+        t=0;
+end lab0302;
+
