@@ -1,0 +1,10 @@
+model lab0702
+        parameter Real a=0.000083;
+        parameter Real b=0.83;
+        parameter Real N=1030;
+        parameter Real n0=8;
+        Real n(start=n0);
+equation
+        der(n)=(a+b*n)*(N-n);
+end lab0702;
+
